@@ -1,0 +1,20 @@
+div {
+    border: solid;
+}
+
+
+#daddyDiv {
+    display: flex;
+    height: 408px;
+    width: 408px;
+    flex-wrap: wrap;
+    align-content: stretch;
+}
+
+#childDiv {
+    flex-grow: 1;
+    height: 100px;
+    width: 100px;
+    margin: 0;
+    border-width: 1px;
+}
