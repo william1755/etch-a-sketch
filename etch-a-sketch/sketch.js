@@ -2,6 +2,11 @@ let container = document.createElement('div');
 document.body.appendChild(container);
 container.id = 'daddyDiv'
 
+let papaDiv = document.createElement('div');
+document.body.appendChild(papaDiv);
+papaDiv.appendChild(container);
+papaDiv.id = 'papaDiv'
+
 let squarePrompt = document.getElementById('squareQuery');
 squarePrompt.addEventListener('click', () => {
     updateGrid();
@@ -33,11 +38,13 @@ function updateGrid() {
         container.appendChild(divs);    
         divs.style.width = squareSizeInPx + 'px';
         divs.style.height = squareSizeInPx + 'px';
-        
 
- 
+        let clearButton = document.getElementById('clearButton');
+        clearButton.addEventListener('click', () => {
+            container.removeChild(divs);
+        })
 
-        divs.addEventListener('mouseover', () => {
+        divs.addEventListener('mouseenter', () => {
             divs.classList.add('bgChanged')
         });
     }
