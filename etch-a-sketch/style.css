@@ -1,20 +1,20 @@
 div {
-    border: solid;
-}
+    border: 0;
 
+}
 
 #daddyDiv {
     display: flex;
-    height: 408px;
-    width: 408px;
     flex-wrap: wrap;
-    align-content: stretch;
+    width: 500px;
+    height: 500px;
 }
 
-#childDiv {
-    flex-grow: 1;
-    height: 100px;
-    width: 100px;
-    margin: 0;
-    border-width: 1px;
+.childDiv {
+    display: flex;
+    flex-grow: 0;
+}
+
+.bgChanged {
+    background-color: black;
 }
